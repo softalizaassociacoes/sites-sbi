@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Sociedade Brasileira de Ictiologia</title>
+  <meta name="description" content="Fale com a Sociedade Brasileira de Ictiologia. Endereço, e-mails e canais de contato da SBI.">
+  <link rel="icon" href="assets/img/favicon-sbi.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/sbi.css">
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><div class="hero__blob hero__blob--1"></div><div class="hero__blob hero__blob--2"></div></div>
+    <div class="bubbles" data-bubbles></div>
+    <div class="container page-hero__inner">
+      <div class="breadcrumb"><a href="/">Início</a><span class="sep">/</span><span>Contato</span></div>
+      <span class="kicker" style="color:var(--aqua-bright)">Fale conosco</span>
+      <h1 class="h1">Entre em contato</h1>
+      <p class="lead">Dúvidas, sugestões ou informações sobre associação e publicações? Estamos à disposição.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split" style="gap:44px;align-items:start">
+        <div class="reveal">
+          <div class="contact-card">
+            <div class="hero__bg"><div class="hero__blob hero__blob--1"></div><div class="hero__blob hero__blob--2"></div></div>
+            <h3 style="position:relative;z-index:1">Sociedade Brasileira de Ictiologia</h3>
+            <ul class="contact-list">
+              <li><span class="ci" data-ico="pin"></span><span><b>Endereço</b>Universidade Federal do Pará — Laboratório de Ictiologia de Altamira. Rua Coronel José Porfírio, 2515, Esplanada do Xingu, Altamira/PA — CEP 68372-040</span></li>
+              <li><span class="ci" data-ico="mail"></span><span><b>E-mail geral</b><a href="mailto:contato.sbi@gmail.com">contato.sbi@gmail.com</a></span></li>
+              <li><span class="ci" data-ico="book"></span><span><b>Boletim da SBI</b><a href="mailto:boletim.sbi@gmail.com">boletim.sbi@gmail.com</a></span></li>
+              <li><span class="ci" data-ico="users"></span><span><b>Área do associado</b><a href="https://associacoes.softaliza.com.br/login/sbi" target="_blank" rel="noopener">Acessar a plataforma</a></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="reveal" data-delay="1">
+          <form class="form" id="contactForm">
+            <div class="field"><label for="nome">Nome</label><input type="text" id="nome" name="nome" required></div>
+            <div class="field"><label for="email">E-mail</label><input type="email" id="email" name="email" required></div>
+            <div class="field"><label for="assunto">Assunto</label><input type="text" id="assunto" name="assunto"></div>
+            <div class="field"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" required></textarea></div>
+            <button class="btn btn--coral btn--lg" type="submit">Enviar mensagem</button>
+            <p class="muted" style="font-size:.86rem;margin-top:4px">Ao enviar, seu aplicativo de e-mail será aberto com a mensagem preenchida para <strong>contato.sbi@gmail.com</strong>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var nome = encodeURIComponent(document.getElementById('nome').value);
+      var email = encodeURIComponent(document.getElementById('email').value);
+      var assunto = document.getElementById('assunto').value || 'Contato pelo site da SBI';
+      var msg = document.getElementById('mensagem').value;
+      var body = encodeURIComponent(msg + '\n\n—\nEnviado por: ' + decodeURIComponent(nome) + ' (' + decodeURIComponent(email) + ')');
+      window.location.href = 'mailto:contato.sbi@gmail.com?subject=' + encodeURIComponent(assunto) + '&body=' + body;
+    });
+  </script>
+  <script src="assets/js/noticias-data.js"></script>
+  <script src="assets/js/sbi-data.js"></script>
+  <script src="assets/js/sbi.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias | Sociedade Brasileira de Ictiologia</title>
+  <meta name="description" content="Novidades da Sociedade Brasileira de Ictiologia: publicações, eventos, o Boletim da SBI e a comunidade ictiológica brasileira.">
+  <link rel="icon" href="assets/img/favicon-sbi.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/sbi.css">
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"><div class="hero__blob hero__blob--1"></div><div class="hero__blob hero__blob--2"></div></div>
+    <div class="bubbles" data-bubbles></div>
+    <div class="container page-hero__inner">
+      <div class="breadcrumb"><a href="/">Início</a><span class="sep">/</span><span>Notícias</span></div>
+      <span class="kicker" style="color:var(--aqua-bright)">Fique por dentro</span>
+      <h1 class="h1">Notícias &amp; novidades</h1>
+      <p class="lead">Acompanhe as publicações, os eventos e as ações da Sociedade Brasileira de Ictiologia.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters reveal">
+        <button class="chip is-active" data-filter="all">Todas</button>
+        <button class="chip" data-filter="noticia">Notícias</button>
+        <button class="chip" data-filter="evento">Eventos</button>
+      </div>
+      <div class="grid cols-3" data-news-archive></div>
+      <div class="load-more"><button class="btn btn--ghost" data-load-more>Carregar mais</button></div>
+    </div>
+  </section>
+
+  <script src="assets/js/noticias-data.js"></script>
+  <script src="assets/js/sbi-data.js"></script>
+  <script src="assets/js/sbi.js"></script>
+</body>
+</html>
