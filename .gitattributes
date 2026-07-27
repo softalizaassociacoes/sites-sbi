@@ -1,0 +1,12 @@
+# Tratar mídia como binário — nunca converter fim de linha (evita corrupção)
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.heic  binary
+*.htm   binary
+*.mp4   binary
+*.woff  binary
+*.woff2 binary
